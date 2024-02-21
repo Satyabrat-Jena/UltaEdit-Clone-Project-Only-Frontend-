@@ -95,11 +95,37 @@ main {
 
 .language{
   display: grid;
+  grid-column: 4;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr ;
   gap: 40px;
-  justify-content: center;
-  align-items: center;
   margin-top: 20px;
 }
+
+@media screen and (max-width: 1080px) {
+  .language{
+    display: grid;
+    /* grid-column: 1; */
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 20px;
+  }
+
+  .release{
+    display: flex;
+    justify-content: space-around;
+    width: 55vw;
+    margin: auto;
+    height: 170px;
+    align-items: center;
+  }
+  
+    .language div{
+      padding: 0px 0px 20px 0px ;
+      background-color: #F9F9F9;
+      width: 80vw;
+    }
+  }
 
 .bit {
   border: none;
@@ -143,5 +169,5 @@ main {
 .language div{
   padding: 0px 0px 20px 0px ;
   background-color: #F9F9F9;
-  width: 80vw;
+  width: auto;
 }
